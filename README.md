@@ -19,7 +19,7 @@ Our simulator uses the SMT2020 dataset. It is available on https://p2schedgen.fe
 
 Kopp, Denny & Hassoun, Michael & Kalir, Adar & Mönch, Lars. (2020). SMT2020—A Semiconductor Manufacturing Testbed. IEEE Transactions on Semiconductor Manufacturing. PP. 1-1. 10.1109/TSM.2020.3001933. 
 
-## Ausführung
+## Ausführung = 실행
 
 ### Greedy-Programm
 
