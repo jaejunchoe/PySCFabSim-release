@@ -4,8 +4,11 @@ import os
 import sys
 
 import pandas as pd
-sys.path.append(os.path.join('C:/','Users','willi','OneDrive','Documents','Studium','Diplomarbeit','Programm + Datengrundlage','PySCFabSim-release-William-Rodmann','simulation'))
-sys.path.append(os.path.join('C:/','Users','willi','OneDrive','Documents','Studium','Diplomarbeit','Programm + Datengrundlage','PySCFabSim-release-William-Rodmann','simulation', 'gym'))
+#sys.path.append(os.path.join('C:/','Users','willi','OneDrive','Documents','Studium','Diplomarbeit','Programm + Datengrundlage','PySCFabSim-release-William-Rodmann','simulation'))
+#sys.path.append(os.path.join('C:/','Users','willi','OneDrive','Documents','Studium','Diplomarbeit','Programm + Datengrundlage','PySCFabSim-release-William-Rodmann','simulation', 'gym'))
+
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+
 from classes import Machine, Route, Lot
 from dispatching.dm_lot_for_machine import LotForMachineDispatchManager
 from dispatching.dm_machine_for_lot import MachineForLotDispatchManager
