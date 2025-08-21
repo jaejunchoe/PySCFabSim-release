@@ -39,11 +39,13 @@ def main():
     rpt_route = False
     batch_strat = 'Demand'
     
+    # 아래 env파일 greedy_instance 변수가 오류 발생 rl_train에서는 none으로 명시되어있음
+
     plugins = []
     if wandb:
         from simulation.plugins.wandb_plugin import WandBPlugin
         plugins.append(WandBPlugin())
-    env = DynamicSCFabSimulationEnvironment(**DEMO_ENV_1, **args, seed=p['seed'], max_steps=10000000, reward_type=p['reward'],greedy_instance=greedy_instance, plugins=[] , rpt_mode=rpt_mode, rpt_route=rpt_route, batch_strat=batch_strat)    
+    env = DynamicSCFabSimulationEnvironment(**DEMO_ENV_1, **args, seed=p['seed'], max_steps=10000000, reward_type=p['reward'], greedy_instance=greedy_instance, plugins=[] , rpt_mode=rpt_mode, rpt_route=rpt_route, batch_strat=batch_strat)    
     obs = env.reset()
     #print("obs", obs)
     reward = 0
