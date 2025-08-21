@@ -16,7 +16,7 @@ from simulation.greedy import run_greedy_RL
 from sys import argv
 
 from simulation.gym.sample_envs import DEMO_ENV_1
-
+## 23123
 
 def main():
     to_train = 608000  #10000000 # 608000 für 730 Tage --> 32 Jahre Trainingszeit (mit Initialisierungsphase)
