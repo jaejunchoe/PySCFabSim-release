@@ -7,10 +7,10 @@ import sys
 import argparse
 
 from stable_baselines3 import PPO
-#sys.path.append(os.path.join('C:/','Users','willi','OneDrive','Documents','Studium','Diplomarbeit','Programm + Datengrundlage','PySCFabSim-release-William-Rodmann','simulation'))
-#sys.path.append(os.path.join('data','horse','ws','wiro085f-WsRodmann','Final_Version','PySCFabSim', 'simulation'))
+sys.path.append(os.path.join('C:/','Users','willi','OneDrive','Documents','Studium','Diplomarbeit','Programm + Datengrundlage','PySCFabSim-release-William-Rodmann','simulation'))
+sys.path.append(os.path.join('data','horse','ws','wiro085f-WsRodmann','Final_Version','PySCFabSim', 'simulation'))
 
-sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+#sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 from simulation.gym.environment import DynamicSCFabSimulationEnvironment
 from simulation.gym.sample_envs import DEMO_ENV_1
@@ -43,7 +43,7 @@ def main():
     if wandb:
         from simulation.plugins.wandb_plugin import WandBPlugin
         plugins.append(WandBPlugin())
-    env = DynamicSCFabSimulationEnvironment(**DEMO_ENV_1, **args, seed=p['seed'], max_steps=10000000, reward_type=p['reward'],greedy_instance=greedy_instance, plugins=[] , rpt_mode=rpt_mode, rpt_route=rpt_route, batch_strat=batch_strat)
+    env = DynamicSCFabSimulationEnvironment(**DEMO_ENV_1, **args, seed=p['seed'], max_steps=10000000, reward_type=p['reward'],greedy_instance=greedy_instance, plugins=[] , rpt_mode=rpt_mode, rpt_route=rpt_route, batch_strat=batch_strat)    
     obs = env.reset()
     #print("obs", obs)
     reward = 0
